@@ -4,12 +4,13 @@
 
 <h1>Todos</h1>
 
-<div id="todos">
-  <% @todos.each do |todo| %>
-    <%= render todo %>
-    <p>
-      <%= link_to "Show this todo", todo %>
-    </p>
+<div class="lists">
+  <% @lists.each do |list| %>
+    <div class="list">
+      <% list.todos.each do |todo| %>
+        <%= render todo %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 

@@ -4,6 +4,7 @@ class TodosController < ApplicationController
   # GET /todos or /todos.json
   def index
     @todos = Todo.all
+    @lists = List.all
   end
 
   # GET /todos/1 or /todos/1.json
@@ -13,6 +14,7 @@ class TodosController < ApplicationController
   # GET /todos/new
   def new
     @todo = Todo.new
+    @lists = List.all
   end
 
   # GET /todos/1/edit
